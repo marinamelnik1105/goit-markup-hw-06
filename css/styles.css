@@ -540,8 +540,6 @@ address {
 .footer-modal {
     width: 570px;
     height: 86px;
-    left: 815px;
-    top: 2748px;
 }
 
 .footer-form {
@@ -562,11 +560,10 @@ address {
 
 
 .footer-form-input {
+    font-size: 12px;
 
     width: 358px;
     height: 50px;
-    left: 815px;
-    top: 2784px;
     padding-left: 16px;
     padding-right: 16px;
     margin-right: 12px;
@@ -602,6 +599,10 @@ address {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-color: transparent;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    cursor: pointer;
     color: #fff;
     transition: background-color var(--transition-dur-and-func);
 
@@ -787,7 +788,6 @@ address {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 528px;
-    height: 581px;
     padding: 40px;
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -842,6 +842,7 @@ address {
     border-radius: 4px;
     padding-left: 42px;
     transition: border-color var(--transition-dur-and-func);
+    font-size: 12px;
 }
 
 .modal-form-input:focus {
@@ -889,6 +890,7 @@ address {
     resize: none;
     transition: border-color var(--transition-dur-and-func);
     margin-bottom: 20px;
+    font-size: 12px;
 
 }
 
@@ -932,6 +934,8 @@ address {
 .modal-form-own-checkbox {
     left: 9px;
     transform: translateY(23%);
+    transition: fill var(--transition-dur-and-func), box-shadow var(--transition-dur-and-func);
+
 
 }
 
@@ -953,9 +957,13 @@ address {
     display: none;
 }
 
-.modal-form-check:focus+.modal-form-own-check,
-.modal-form-check:focus+.modal-form-own-checkbox {
+.modal-form-check:focus+.modal-form-own-check {
+
     box-shadow: 0 0 0 2px rgba(81, 43, 250, 0.5);
+}
+
+.modal-form-check:focus~.modal-form-own-checkbox {
+    fill: var(--accent-color);
 }
 
 .modal-form-field-desc-checkbox {
@@ -975,10 +983,14 @@ address {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    text-decoration-line: underline solid;
-
-
+    text-decoration: underline;
     color: var(--accent-color);
+    transition: text-decoration var(--transition-dur-and-func);
+}
+
+.modal-form-field-desc-checkbox-link:hover,
+.modal-form-field-desc-checkbox-link:focus {
+    text-decoration: none;
 }
 
 .modal-form-submit {
